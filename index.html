@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="css/style.css">
+   <title>Calculator</title>
+      <script src = 'js/moment.min.js' ></script>
+</head>
+<body>
+   <div class="container">
+      
+
+<div id = "clock" onload="currentTime()"></div>
+
+
+   </div>
+   <div class="main">
+      <input type="text" id = 'res'>
+      <div class="btn">
+         <input type="button" value = 'C' onclick = "Clear()">
+         <input type="button" value = '%' onclick = "Solve('%')">
+         <input type="button" value = '←' onclick ="Back('←')">
+         <input type="button" value = '/' onclick = "Solve('/')">
+         <br>
+         <input type="button" value = '7' onclick = "Solve('7')">
+         <input type="button" value = '8' onclick = "Solve('8')">
+         <input type="button" value = '9' onclick = "Solve('9')">
+         <input type="button" value = 'x' onclick = "Solve('*')">
+         <br>
+         <input type="button" value = '4' onclick = "Solve('4')">
+         <input type="button" value = '5' onclick = "Solve('5')">
+         <input type="button" value = '6' onclick = "Solve('6')">
+         <input type="button" value = '-' onclick = "Solve('-')">
+         <br>
+         <input type="button" value = '1' onclick = "Solve('1')">
+         <input type="button" value = '2' onclick = "Solve('2')">
+         <input type="button" value = '3' onclick = "Solve('3')">
+         <input type="button" value = '+' onclick = "Solve('+')">
+         <br>
+         <input type="button" value = '00'onclick = "Solve('00')">
+         <input type="button" value = '0' onclick = "Solve('0')">
+         <input type="button" value = '.' onclick = "Solve('.')">
+         <input type="button" value = '=' onclick = "Result()">
+      </div>
+   </div>
+   
+
+   <script src = 'js/plugin.js' >
+     
+   </script>
+   <script type="text/javascript">
+function currentTime() {
+  let date = new Date(); 
+  let hh = date.getHours();
+  let mm = date.getMinutes();
+  let ss = date.getSeconds();
+  let session = "AM";
+
+    
+  if(hh > 12){
+      session = "PM";
+   }
+
+   hh = (hh < 10) ? "0" + hh : hh;
+   mm = (mm < 10) ? "0" + mm : mm;
+   ss = (ss < 10) ? "0" + ss : ss;
+    
+   let time = hh + ":" + mm + ":" + ss + " " + session;
+
+  document.getElementById("clock").innerText = time; 
+  var t = setTimeout(function(){ currentTime() }, 1000); 
+
+}
+
+currentTime()
+   </script>
+
+</body>
+</html

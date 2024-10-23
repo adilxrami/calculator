@@ -1,0 +1,72 @@
+*{
+   padding: 0;
+   margin: 0;
+   font-family: 'poppins', sans-serif;
+}
+body{
+   background-color: #F7C5CC;
+   background-image: url(../images/sakura.jpg);
+   background-size: cover;
+   display: grid;
+   height: 100vh;
+   place-items: center;
+}
+.container {
+   height: 200px;
+   width: 100%;
+}
+#clock{
+padding: 30px;
+height: 30px;
+color: #CC313D;
+border: 1px solid #CC313D;
+position: relative;
+top: 58%;
+font-size: 40px;
+
+text-align: center;
+}
+.main{
+   width: 355px;
+   height: 440px;
+   background-color: white;
+   border: 3px solid #CC313D;
+   position: relative;
+top: 10%;
+   border-radius: 6px; 
+  /* box-shadow: 10px 10px 5px 0px rgba(204,49,61,1);*/
+}
+.main input[type='text'] {
+   width: 88%;
+   position: relative;
+   height: 80px;
+   top: 5px;
+   text-align: right;
+   padding: 3px 6px;
+   outline: none;
+   font-size: 40px;
+   border: 2px solid #CC313D;
+   display: flex;
+   margin: auto;
+   border-radius: 6px;
+   color: #CC313D;
+}
+.btn input[type='button']{
+   width:80px;
+   padding: 2px;
+   margin: 2px 0px;
+   position: relative;
+   left: 13px;
+   top: 20px;
+   height: 60px;
+   cursor: pointer;
+   font-size: 18px;
+   transition: 0.5s;
+   background-color: #F7C5CC;
+   border-radius: 6px;
+   color: CC313D;
+}
+.btn input[type='button']:hover{
+   background-color: #CC313D;
+   color: white;
+}
